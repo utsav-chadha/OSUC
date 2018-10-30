@@ -1,0 +1,29 @@
+<div class='container'>
+    <div class="row">
+    <div class="col-sm-0 col-md-3"></div>
+
+    <div class="col-sm-12 col-md-6">
+      <div class="wrapper">
+        <form class="form-signin blackBorder signup-form" (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+          <h2 class="form-signin-heading text-center">Create A New Account</h2>
+          <br>
+          <input type="text" class="form-control" name="name" placeholder="Display Name" required autofocus="" ngModel />
+          <br>
+          <!-- <input type="text" class="form-control" name="username" placeholder="Last Name" required="" autofocus="" />
+          <br> -->
+          <span class="help-block" style="color:red;" *ngIf="!email.valid && email.touched">*Enter a valid email Id</span>
+          <input type="email" class="form-control" name="email" placeholder="Email Address" #email="ngModel" email required="" autofocus="" ngModel />
+          <br>
+          <input type="password" class="form-control" name="password" placeholder="Password (Minimum 6 characters)" (keypress)="onPassChange()" required ngModel minlength="6"  />
+          <br>
+          <input  type="password" class="form-control" name="confirmPasword" [(ngModel)]="confirmPass" #confirmPassword="ngModel" placeholder="Confirm Password" appConfirmEqualValidator="password" required ngModel autofocus="" />
+          <span class="help-block text-center" style="color:red;" *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual ">*Passwords do not match</span>
+          <br>
+          <button class="btn btn-lg btn-primary btn-block" [disabled]="!signupForm.valid" style="margin-top:0px;" type="submit">Let's Get Started</button>
+
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-0 col-md-3 "></div>
+    </div>
+    </div>

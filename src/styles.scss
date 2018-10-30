@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+.blackBorder{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+// input.ng-invalid.ng-touched{
+//   border: 1px solid red;
+//   box-shadow: red ;
+// }
+
+.primaryBg{
+  background-color: #00acc1;
+}
+
+.secondaryBg{
+  background-color: #006064;
+}
+
+.circleBtn{
+  background-color: #006064!important;
+border-radius: 50%;
+padding: 0px;
+width: 80px;
+height: 80px;
+line-height: 80px;
+}
+
+.loader {
+  border: 3px solid #ffff;
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 0.8s linear infinite;
+}
+
+.loader2{
+
+    border-top: 3px solid #00acc1;
+    border-right: 3px solid white;
+    border-bottom: 3px solid #00acc1;
+    border-left: 3px solid white;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.roundImg{
+  max-height: 70px;
+  max-width: 70px;
+  border-radius: 50%;
+  margin-right: -10px!important;
+}
+.profileImg{
+  max-height: 120px;
+  max-width: 120px;
+  border-radius: 50%;
+  margin-right: -10px!important;
+}
+
+.expertTitle{
+  margin-top: 9px;
+}
+
+.tags{
+  border: 1px solid rgba(0, 0, 0, 0.2);;
+  margin-right: 5px;
+  color: rgba(0, 0, 0, 0.5);
+
+  margin-top: 10px!important;
+  padding: 5px;
+}
+
+.tagsBody{
+  line-height: 40px;
+}
+.navMargin{
+  margin-top: 80px;
+}
+
+.readAnsBtn{
+  max-height: 40px!important;
+  min-width: 25vw!important;
+  margin-bottom: 0px;
+}
+
+.inline{
+  display: inline;
+}
+
+.floatLeft{
+  float: left;
+}
+
+.floatRight{
+  float: right;
+}
+.section{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}

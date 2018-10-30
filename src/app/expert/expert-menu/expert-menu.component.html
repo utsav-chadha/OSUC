@@ -1,0 +1,14 @@
+<div class=" list-group sidenav w-100 ">
+    <span class="text-center"><img class="profileImg" [src] = expert.photoUrl></span>
+    <ul class="list-group">
+    <h3 class="text-center"><li class="list-group-item">{{expert.fname}} {{expert.lname}}</li></h3>
+    <li class="list-group-item text-muted text-center" style="margin-top:-20px;"><i class="fas fa-check"></i>Verified EdBud Expert</li>
+    <li class="list-group-item text-muted">{{expert.description}}</li>
+    <a routerLink="/posts/recent" routerLinkActive="active" class="list-group-item">Recent posts</a>
+    <a routerLink="/posts/sample-essays" routerLinkActive="active" class="list-group-item">Sample Essays</a>
+    <a routerLink="/posts/sample-letters" routerLinkActive="active" class="list-group-item">Sample Letters</a>
+    <a routerLink="/posts/tips-and-tricks" routerLinkActive="active" class="list-group-item">Tips And Tricks</a>
+    <a routerLink="/posts/articles" routerLinkActive="active" class="list-group-item">Articles</a>
+  </ul>
+
+  </div>

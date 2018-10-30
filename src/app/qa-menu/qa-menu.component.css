@@ -1,0 +1,34 @@
+.sidenav{
+  /* #006064 */
+  position:fixed;
+  max-width: 15%;
+  left: 0;
+  height: 100%;
+  background-color:#00acc1;
+  margin-top : 50px;
+  overflow-y: auto;
+
+}
+
+
+.list-group-item{
+  margin-top: 40px;
+  /* font-weight: bold; */
+  font-size: 210%;
+  color: white;
+  border: none;
+  background-color:	transparent;
+
+}
+
+.list-group a:hover{
+  color: #006064;
+}
+
+.active{
+  color: #006064;
+  border: none;
+
+  /* border-left: 10px solid  #006064;
+  border-radius: 50px; */
+}

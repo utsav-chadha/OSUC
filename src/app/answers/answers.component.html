@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" style="margin-top:70px;">
+        <div class="card-body text-center">
+          <h4 class="text-center" [innerText]= question.text></h4>
+          <h6 class="text-muted">{{question.description}}</h6>
+          <p class="text-bold inline">Views: {{question.viewCount}} </p>
+          <p class="text-bold inline ml-2">Answers: {{question.answerCount}} </p>
+          <p class="text-bold inline ml-2">Followers: {{question.followerCount}} </p>
+          <br>
+          <button class="btn primaryBg">Follow This Question</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card customCard" *ngFor= "let answer of answers">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-1">
+                <span><img class="roundImg" [src] = answer.expert.photoUrl></span>
+
+            </div>
+            <div class="col-md-11 expertTitle">
+                <a  [routerLink]="['/expert/', answer.eid]" >{{answer.expert.fname + " " + answer.expert.lname}}</a>
+                <p class="text-muted">{{answer.expert.description}}</p>
+
+            </div>
+          </div>
+    </div>
+
+    <div class="card-body">
+      <p [innerHTML]=answer.text></p>
+    </div>
+
+  </div>
+
+</div>

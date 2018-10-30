@@ -1,0 +1,57 @@
+<div class="container">
+<div class="qaFeed" >
+
+
+     <div *ngIf="posts != null else noPosts">
+      <div *ngFor="let post of posts">
+      <div class="card " #postCard>
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-1">
+                  <span><img class="roundImg" [src] = expertIdExpertMap[post.eid].photoUrl></span>
+
+              </div>
+              <div class="col-md-11 expertTitle">
+                  <a  [routerLink]="['/expert/', expertIdExpertMap[post.eid].id]" >{{expertIdExpertMap[post.eid].fname + " " + expertIdExpertMap[post.eid].lname}}</a>
+                  <p class="text-muted">{{expertIdExpertMap[post.eid].description}}</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body tagsBody" style="margin-bottom:10px;">
+              <h4 [innerText]=post.title></h4>
+              <span class="tags" *ngFor="let tag of post.tags">
+              {{tag}}
+              </span>
+          </div>
+
+          <div class="card-body postCardContent" [innerHtml]=post.text>
+
+          </div>
+
+
+          <div class="card-footer">likes {{post.likeCount}} {{post.timeStamp | date:'medium' }} {{post.postType}}
+            <button (DOMNodeInserted) = "onPostCreated()" [ngStyle]="{display: overflowPost == true ? 'block' : 'none' }" style='float:right;' *ngIf= [] class="btn btn-primary">
+              Read More
+            </button>
+          </div>
+        </div>
+        <br><br>
+        </div>
+     </div>
+
+
+     <ng-template #noPosts>
+      <div style="margin-left: 35vw; margin-top:20vw" class="loader loader2 "></div>
+     </ng-template>
+
+      <div *ngIf="posts.length == 0 ">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="text-muted text-center">oops! there are no posts to show</h5>
+          </div>
+        </div>
+      </div>
+</div>
+</div>

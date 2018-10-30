@@ -1,0 +1,21 @@
+.qaFeed{
+  margin-left: 5%;
+  min-width: 90%;
+  margin-top: 90px;
+
+  /* margin-right: 0px!important; */
+}
+.jumbotron{
+  margin-top: 90px!important;
+}
+
+
+.card{
+  min-width: 75vw!important;
+}
+
+.postCardContent{
+  max-height: 300px;
+  overflow-y: hidden;
+}
+

@@ -1,0 +1,63 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark   cyan darken-1">
+
+  <!-- Navbar brand -->
+  <!-- <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand> -->
+  <logo><a class="navbar-brand" href="#">BPIT</a></logo>
+
+  <!-- Collapsible content -->
+  <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" routerLink="/questions" mdbWavesEffect>Discussions<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" routerLink="/posts/all" mdbWavesEffect>Events</a>
+          </li>
+
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" routerLink="/posts/all" mdbWavesEffect>Blogs</a>
+          </li>
+          <!-- <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" routerLink="/posts/all" mdbWavesEffect>Faculty</a>
+          </li> -->
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" routerLink="/services" mdbWavesEffect>Study Resources</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" routerLink="/services" mdbWavesEffect>Assignments</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li *ngIf="isLoggedIn" class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+              Profile<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">My Account</a>
+                  <a class="dropdown-item waves-light" mdbWavesEffect (click)="logOut()">Logout</a>
+
+              </div>
+          </li>
+
+          <li *ngIf="!isLoggedIn" class="nav-item">
+            <a class="nav-link waves-light" (click)="loginNavigate()" mdbWavesEffect>login</a>
+          </li>
+
+      </ul>
+      <!-- Links -->
+
+<!-- Search form -->
+      <!-- <form class="form-inline waves-light" mdbWavesEffect>
+          <div class="md-form mt-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          </div>
+      </form> -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+

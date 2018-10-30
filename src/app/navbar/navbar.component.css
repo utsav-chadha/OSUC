@@ -1,0 +1,15 @@
+.nav-item {
+  padding-left:10px;
+  padding-right:10px;
+  font-weight: bold;
+}
+.navbar{
+  max-height: 40px;
+
+}
+
+.navbar-nav li.active > a {
+  background-color: transparent!important;
+  border-bottom:2px solid #006064;
+
+}
